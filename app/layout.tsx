@@ -27,6 +27,11 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        {/* noindex */}
+        <meta name="robots" content="noindex" />
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
+      </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
